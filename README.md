@@ -2,6 +2,8 @@
 
 ## Play Playbook
 
-`$ docker run --rm deploy -i <inventoryfile> <playbookfile>`
+`$ docker run --rm -v <path-to-playbooks>:/ansible/playbooks nfmsjoeg/ansible-playbook <playbookfilename>`
 
-`$ docker run --rm deploy -i hosts deploy.yml`
+### Working Example
+
+`$ docker run --rm -v $(pwd)/playbooks:/ansible/playbooks nfmsjoeg/ansible-playbook deploy.yml`
